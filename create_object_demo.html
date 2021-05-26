@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        const file = new Object({ 'name': 'file1' });
+        // Object.defineProperty(file, 'updated_name', {
+        //     set: function (name) { this.name = name }
+        // });
+        Object.defineProperty(file, 'name', {
+            get: function () { return name }
+        });
+
+        // file.updated_name = 'file2'
+        file.name = 'file3'
+        document.getElementById("demo").innerHTML =
+            file.name;
+    </script>
+
+</body>
+
+</html>
